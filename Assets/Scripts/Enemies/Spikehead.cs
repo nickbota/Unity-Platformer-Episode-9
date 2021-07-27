@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spikehead : MonoBehaviour// EnemyDamage
+public class Spikehead : EnemyDamage
 {
     [Header("SpikeHead Attributes")]
     [SerializeField] private float speed;
@@ -61,7 +61,7 @@ public class Spikehead : MonoBehaviour// EnemyDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //base.OnTriggerEnter2D(collision);
+        base.OnTriggerEnter2D(collision);
         Stop(); //Stop spikehead once he hits something
     }
 }
